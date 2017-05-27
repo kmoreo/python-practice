@@ -1,2 +1,2 @@
 # python-practice
-Some exercises completed in the name of teaching myself python.
+Some exercises completed in the name of learning python.
