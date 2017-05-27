@@ -1,4 +1,4 @@
-## LEARN PYTHON THE HARD WAY
+## LEARN PYTHON THE HARD WAY, Exercises 1-10
 
 # Exercise 1: A Good First Program
 print "Hello World!"
@@ -107,4 +107,37 @@ We'll be able to type as much as we like.
   Even 4 lines if we want, or 5, or 6.
 """
 
-# test line
+# Exercise 10: What Was That?
+print "\tI'm tabbed in."
+print "I'm split\non a line."
+print "I'm \\ a \\ cat."
+print """
+A list of things cats like:
+\t* Cat food
+\t* Fishies
+\t* Catnip\n\t* Grass
+"""
+
+## Escape Sequences ##
+
+# Escape      What it does.
+# \\          Backslash (\)
+# \'          Single-quote (')
+# \"          Double-quote (")
+# \a          ASCII bell (BEL)
+# \b          ASCII backspace (BS)
+# \f          ASCII formfeed (FF)
+# \n          ASCII linefeed (LF)
+# \N{name}    Character named name in the Unicode database (Unicode only)
+# \r          Carriage Return (CR)
+# \t          Horizontal Tab (TAB)
+# \uxxxx      Character with 16-bit hex value xxxx (must prefix as: u'\u...')
+# \Uxxxxxxxx  Character with 32-bit hex value xxxxxxxx (must prefix as: u'\U...')
+# \v          ASCII vertical tab (VT)
+# \ooo        Character with octal value ooo
+# \xhh        Character with hex value hh
+
+# "Fun" code that will takeover your terminal until you interrupt it...
+# while True:
+#     for i in ["/","-","|","\\","|"]:
+#         print "%s\r" % i,
