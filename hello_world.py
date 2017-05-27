@@ -1,4 +1,4 @@
-# LEARN PYTHON THE HARD WAY
+## LEARN PYTHON THE HARD WAY
 
 # Exercise 1: A Good First Program
 print "Hello World!"
@@ -40,3 +40,22 @@ print "The first of these %d pets is a %s named %s." % (pets, cat, pet_1)
 print "The second is a %s named %s." % (cat, pet_2)
 print "The third is a %s named %s." % (dog, pet_3)
 print "This is a test sentence: %r vs. %s." % (string, string)
+
+# Exercise 6: Strings and Text
+x = "There are %d types of people." % 10
+binary = "binary"
+do_not = "don't"
+y = "Those who know %s and those who %s." % (binary, do_not)
+hilarious = False
+joke_evaluation = "Isn't that joke so funny?! %r"
+is_funny = 'No'
+joke_statement = "Isn't that joke so funny?!"
+cheese = ["cheddar", "swiss", "brie", "pepperjack"]
+
+print x
+print y
+print joke_evaluation % hilarious
+print joke_statement, is_funny # using a comma inserts spaces around variable values
+print joke_statement + is_funny # using a + smashes them together and looks dumb
+print "Cheese is awesome. %d of my favorite cheeses are: %s, %s, %s, and %s." % (len(cheese), cheese[0], cheese[1], cheese[2], cheese[3])
+
