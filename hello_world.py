@@ -31,6 +31,7 @@ pet_2 = 'Rahvin'
 pet_3 = 'Reiko'
 cat = 'cat'
 dog = 'dog'
+string = "O'Malley's Pub"
 
 print "Let's talk about %s." % name
 print "She lives in %s." % city
@@ -38,3 +39,4 @@ print "She has %d pets." % len([pet_1, pet_2, pet_3])
 print "The first of these %d pets is a %s named %s." % (pets, cat, pet_1)
 print "The second is a %s named %s." % (cat, pet_2)
 print "The third is a %s named %s." % (dog, pet_3)
+print "This is a test sentence: %r vs. %s." % (string, string)
