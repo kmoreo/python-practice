@@ -57,5 +57,52 @@ print y
 print joke_evaluation % hilarious
 print joke_statement, is_funny # using a comma inserts spaces around variable values
 print joke_statement + is_funny # using a + smashes them together and looks dumb
-print "Cheese is awesome. %d of my favorite cheeses are: %s, %s, %s, and %s." % (len(cheese), cheese[0], cheese[1], cheese[2], cheese[3])
+print "Cheese is awesome. %d of my favorite cheeses are: %s, %s, %s, %s, and %s." % (len(cheese)+1, cheese[0], cheese[1], cheese[2], cheese[3], 'gouda')
 
+# Exercise 7: More Printing
+ltr1 = "C"
+ltr2 = "h"
+ltr3 = "e"
+ltr4 = "e"
+ltr5 = "s"
+ltr6 = "e"
+ltr7 = "S"
+ltr8 = "t"
+ltr9 = "i"
+ltr10 = "c"
+ltr11 = "k"
+ltr12 = "s"
+
+print ltr1 + ltr2 + ltr3 + ltr4 + ltr5 + ltr6, # without comma two lines print
+print ltr7 + ltr8 + ltr9 + ltr10 + ltr11 + ltr12 # with comma one line prints
+
+# Exercise 8: Printing, Printing
+formatter = "%r %r %r %r"
+
+print formatter % (1, 2, 3, 4)
+print formatter % ("one", "two", "three", "four")
+print formatter % (True, False, False, True)
+print formatter % (formatter, formatter, formatter, formatter)
+print formatter % (
+    "I had this thing.", #lines 1, 2, and 4 will print out in single quotes
+    "That you could type up right.", 
+    "But it didn't sing.", # line 3 prints out in double quotes because of "didn't"
+    "So I said goodnight."
+)
+
+# Exercise 9: Printing, Printing, Printing
+days = "Mon Tue Wed Thu Fri Sat Sun"
+months = "\nJan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug"
+
+print "Here are the days: ", days
+# print "Here are the days: %s" % days
+# print "Here are the months: ", months
+print "Here are the months: %s" % months
+
+# this is like to a HEREDOC in Ruby
+print """
+There's something going on here.
+    With the three double-quotes.
+We'll be able to type as much as we like.
+  Even 4 lines if we want, or 5, or 6.
+"""
