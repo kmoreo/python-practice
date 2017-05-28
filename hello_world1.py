@@ -25,12 +25,34 @@ import sys
 # print "Your name is %s, you are %d years old, and live in %s. Spiffy" % (name, age, city)
 
 # Exercise 13: Parameters, Unpacking, Variables
-# from sys import argv        # this imports just 'argv' from the sys module
+from sys import argv        # this imports just 'argv' from the sys module
                             # no need to prefix with "sys."
 
-script, first, second, third = sys.argv   # this works in Ruby too, except as "ARGV"
+# script, first, second, third = sys.argv   # this works in Ruby too, except as "ARGV"
 
-print "The script is called:", script
-print "The first variable is:", first
-print "The second variable is:", second
-print "The third variable is:", third
+# print "The script is called:", script
+# print "The first variable is:", first
+# print "The second variable is:", second
+# print "The third variable is:", third
+
+
+# Exercise 14: Prompting and Passing
+script, user_name = argv
+prompt = '> '
+
+print "Hi %s, I'm the %s script." % (user_name, script)
+print "I'd like to ask you a few questions."
+print "Do you like me, %s?" % user_name
+likes = raw_input(prompt)
+
+print "Where do you live %s?" % user_name
+lives = raw_input(prompt)
+
+print "What kind of computer do you have?"
+computer = raw_input(prompt)
+
+print """
+Alright, so you said %r about liking me.
+You live in %r.  Not sure where that is.
+And you have a %r computer.  Nice.
+""" % (likes, lives, computer)
