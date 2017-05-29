@@ -1,4 +1,4 @@
-## LEARN PYTHON THE HARD WAY, Exercises 1-10
+# LEARN PYTHON THE HARD WAY, Exercises 1-10
 
 # Exercise 1: A Good First Program
 print "Hello World!"
@@ -15,7 +15,7 @@ cars_driven = drivers
 carpool_capacity = cars_driven * space_in_a_car
 average_passengers_per_car = passengers / cars_driven
 
-print "There are", cars,"cars available."
+print "There are", cars, "cars available."
 print "There are only", drivers, "drivers available."
 print "There will be", cars_not_driven, "empty cars today."
 print "We can transport", carpool_capacity, "people today."
@@ -55,9 +55,13 @@ cheese = ["cheddar", "swiss", "brie", "pepperjack"]
 print x
 print y
 print joke_evaluation % hilarious
-print joke_statement, is_funny # using a comma inserts spaces around variable values
-print joke_statement + is_funny # using a + smashes them together and looks dumb
-print "Cheese is awesome. %d of my favorite cheeses are: %s, %s, %s, %s, and %s." % (len(cheese)+1, cheese[0], cheese[1], cheese[2], cheese[3], 'gouda')
+# using a comma inserts spaces around variable values
+print joke_statement, is_funny
+# using a + smashes them together and looks dumb
+print joke_statement + is_funny
+print "Cheese is awesome. %d of my favorite cheeses are:",
+print "%s, %s, %s, %s, and %s."
+% (len(cheese)+1, cheese[0], cheese[1], cheese[2], cheese[3], 'gouda')
 
 # Exercise 7: More Printing
 ltr1 = "C"
@@ -73,8 +77,10 @@ ltr10 = "c"
 ltr11 = "k"
 ltr12 = "s"
 
-print ltr1 + ltr2 + ltr3 + ltr4 + ltr5 + ltr6, # without comma two lines print
-print ltr7 + ltr8 + ltr9 + ltr10 + ltr11 + ltr12 # with comma one line prints
+# without comma two lines print
+# with comma one line prints
+print ltr1 + ltr2 + ltr3 + ltr4 + ltr5 + ltr6,
+print ltr7 + ltr8 + ltr9 + ltr10 + ltr11 + ltr12
 
 # Exercise 8: Printing, Printing
 formatter = "%r %r %r %r"
@@ -84,9 +90,11 @@ print formatter % ("one", "two", "three", "four")
 print formatter % (True, False, False, True)
 print formatter % (formatter, formatter, formatter, formatter)
 print formatter % (
-    "I had this thing.", #lines 1, 2, and 4 will print out in single quotes
-    "That you could type up right.", 
-    "But it didn't sing.", # line 3 prints out in double quotes because of "didn't"
+    # lines 1, 2, and 4 will print out in single quotes
+    "I had this thing.",
+    "That you could type up right.",
+    # line 3 prints out in double quotes because of "didn't"
+    "But it didn't sing.",
     "So I said goodnight."
 )
 
@@ -118,7 +126,7 @@ A list of things cats like:
 \t* Catnip\n\t* Grass
 """
 
-## Escape Sequences ##
+# Escape Sequences ##
 
 # Escape      What it does.
 # \\          Backslash (\)
