@@ -37,22 +37,78 @@ from sys import argv        # this imports just 'argv' from the sys module
 
 
 # Exercise 14: Prompting and Passing
-script, user_name = argv
-prompt = '> '
+# script, user_name = argv
+# prompt = '> '
 
-print "Hi %s, I'm the %s script." % (user_name, script)
-print "I'd like to ask you a few questions."
-print "Do you like me, %s?" % user_name
-likes = raw_input(prompt)
+# print "Hi %s, I'm the %s script." % (user_name, script)
+# print "I'd like to ask you a few questions."
+# print "Do you like me, %s?" % user_name
+# likes = raw_input(prompt)
 
-print "Where do you live %s?" % user_name
-lives = raw_input(prompt)
+# print "Where do you live %s?" % user_name
+# lives = raw_input(prompt)
 
-print "What kind of computer do you have?"
-computer = raw_input(prompt)
+# print "What kind of computer do you have?"
+# computer = raw_input(prompt)
 
-print """
-Alright, so you said %r about liking me.
-You live in %r.  Not sure where that is.
-And you have a %r computer.  Nice.
-""" % (likes, lives, computer)
+# print """
+# Alright, so you said %r about liking me.
+# You live in %r.  Not sure where that is.
+# And you have a %r computer.  Nice.
+# """ % (likes, lives, computer)
+
+## Exercise 15: Reading Files
+# script, filename = argv
+
+# txt = open(filename)
+
+# print "Here are the contents of your file, %r:" % filename
+# print txt.read()
+# # print open(filename).read()   # does the same thing as the line above
+
+# print "Want to open another file? Type the name here:",
+# file_again = raw_input("> ")
+
+# txt_again = open(file_again)
+
+# print txt_again.read()
+
+# txt.close()
+# txt_again.close()
+
+# print "\n\nThat's all for now. Goodbye!"
+
+# Exercise 16: Reading and Writing Files
+
+script, filename = argv
+
+print "We're going to erase %r. *evil laugh*" % filename
+print "If you don't want that, hit CTRL-C (^C)."
+print "If you do want that, hit RETURN."
+
+raw_input("?")
+
+print "Opening the file..."
+target = open(filename, 'a')
+
+## Unnecessary since file was opened with 'w' mode
+# print "Truncating the file.  Goodbye!"
+# target.truncate()
+
+print "Now I'm going to ask you for three lines."
+
+line1 = raw_input("line 1: ")
+line2 = raw_input("line 2: ")
+line3 = raw_input("line 3: ")
+
+print "I'm going to write these to the file."
+
+target.write(line1 + "\n" + line2 + "\n" + line3 + "\n")
+# target.write("\n")
+# target.write(line2)
+# target.write("\n")
+# target.write(line3)
+# target.write("\n")
+
+print "And finally, we close it."
+target.close()
