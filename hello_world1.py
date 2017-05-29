@@ -78,37 +78,63 @@ from sys import argv        # this imports just 'argv' from the sys module
 
 # print "\n\nThat's all for now. Goodbye!"
 
-# Exercise 16: Reading and Writing Files
+# # Exercise 16: Reading and Writing Files
 
-script, filename = argv
+# script, filename = argv
 
-print "We're going to erase %r. *evil laugh*" % filename
-print "If you don't want that, hit CTRL-C (^C)."
-print "If you do want that, hit RETURN."
+# print "We're going to erase %r. *evil laugh*" % filename
+# print "If you don't want that, hit CTRL-C (^C)."
+# print "If you do want that, hit RETURN."
 
-raw_input("?")
+# raw_input("?")
 
-print "Opening the file..."
-target = open(filename, 'a')
+# print "Opening the file..."
+# target = open(filename, 'a')
 
-## Unnecessary since file was opened with 'w' mode
-# print "Truncating the file.  Goodbye!"
-# target.truncate()
+# ## Unnecessary since file was opened with 'w' mode
+# # print "Truncating the file.  Goodbye!"
+# # target.truncate()
 
-print "Now I'm going to ask you for three lines."
+# print "Now I'm going to ask you for three lines."
 
-line1 = raw_input("line 1: ")
-line2 = raw_input("line 2: ")
-line3 = raw_input("line 3: ")
+# line1 = raw_input("line 1: ")
+# line2 = raw_input("line 2: ")
+# line3 = raw_input("line 3: ")
 
-print "I'm going to write these to the file."
+# print "I'm going to write these to the file."
 
-target.write(line1 + "\n" + line2 + "\n" + line3 + "\n")
-# target.write("\n")
-# target.write(line2)
-# target.write("\n")
-# target.write(line3)
-# target.write("\n")
+# target.write(line1 + "\n" + line2 + "\n" + line3 + "\n")
+# # target.write("\n")
+# # target.write(line2)
+# # target.write("\n")
+# # target.write(line3)
+# # target.write("\n")
 
-print "And finally, we close it."
-target.close()
+# print "And finally, we close it."
+# target.close()
+
+# Exercise 17: More Files
+# from sys import argv
+from os.path import exists
+
+script, from_file, to_file = argv
+
+print "Copying from %s to %s" % (from_file, to_file)
+
+# we could do these two on one line, how?
+# in_file = open(from_file)
+indata = open(from_file).read()
+
+print "The input file is %d bytes long" % len(indata)
+
+print "Does the output file exist? %r" % exists(to_file)
+print "Ready, hit RETURN to continue, CTRL-C to abort."
+raw_input()
+
+out_file = open(to_file, 'w')
+out_file.write(indata)
+
+print "Alright, all done."
+
+out_file.close()
+# in_file.close()
