@@ -127,6 +127,8 @@ indata = open(from_file).read()
 
 print "The input file is %d bytes long" % len(indata)
 
+# exists(_item_) returns a boolean and tells you if a thing exists
+# per the docs: "Returns True if the specified item is present in the tree."
 print "Does the output file exist? %r" % exists(to_file)
 print "Ready, hit RETURN to continue, CTRL-C to abort."
 raw_input()
