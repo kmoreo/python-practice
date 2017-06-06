@@ -25,7 +25,7 @@ import sys
 # print "Your name is %s, you are %d years old, and live in %s. Spiffy" % (name, age, city)
 
 # Exercise 13: Parameters, Unpacking, Variables
-from sys import argv        # this imports just 'argv' from the sys module
+# from sys import argv        # this imports just 'argv' from the sys module
                             # no need to prefix with "sys."
 
 # script, first, second, third = sys.argv   # this works in Ruby too, except as "ARGV"
@@ -114,7 +114,7 @@ from sys import argv        # this imports just 'argv' from the sys module
 # target.close()
 
 # Exercise 17: More Files
-# from sys import argv
+from sys import argv
 from os.path import exists
 
 script, from_file, to_file = argv
