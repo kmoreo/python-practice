@@ -136,3 +136,5 @@ out_file.write(indata)
 
 out_file.close()
 # in_file.close()
+
+print "That's all. Bye."
